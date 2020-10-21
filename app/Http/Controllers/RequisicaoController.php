@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Estoque;
+use App\Models\Requisicao;
 use Illuminate\Http\Request;
 
-class EstoqueController extends Controller
+class RequisicaoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class EstoqueController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Estoque  $estoque
+     * @param  \App\Models\Requisicao  $requisicao
      * @return \Illuminate\Http\Response
      */
-    public function show(Estoque $estoque)
+    public function show(Requisicao $requisicao)
     {
         //
     }
@@ -52,10 +52,10 @@ class EstoqueController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Estoque  $estoque
+     * @param  \App\Models\Requisicao  $requisicao
      * @return \Illuminate\Http\Response
      */
-    public function edit(Estoque $estoque)
+    public function edit(Requisicao $requisicao)
     {
         //
     }
@@ -64,10 +64,10 @@ class EstoqueController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Estoque  $estoque
+     * @param  \App\Models\Requisicao  $requisicao
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Estoque $estoque)
+    public function update(Request $request, Requisicao $requisicao)
     {
         //
     }
@@ -75,10 +75,10 @@ class EstoqueController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Estoque  $estoque
+     * @param  \App\Models\Requisicao  $requisicao
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Estoque $estoque)
+    public function destroy(Requisicao $requisicao)
     {
         //
     }

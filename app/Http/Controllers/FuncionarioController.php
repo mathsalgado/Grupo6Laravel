@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Maquina;
+use App\Models\Funcionario;
 use Illuminate\Http\Request;
 
-class MaquinaController extends Controller
+class FuncionarioController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class MaquinaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Maquina  $maquina
+     * @param  \App\Models\Funcionario  $funcionario
      * @return \Illuminate\Http\Response
      */
-    public function show(Maquina $maquina)
+    public function show(Funcionario $funcionario)
     {
         //
     }
@@ -52,10 +52,10 @@ class MaquinaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Maquina  $maquina
+     * @param  \App\Models\Funcionario  $funcionario
      * @return \Illuminate\Http\Response
      */
-    public function edit(Maquina $maquina)
+    public function edit(Funcionario $funcionario)
     {
         //
     }
@@ -64,10 +64,10 @@ class MaquinaController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Maquina  $maquina
+     * @param  \App\Models\Funcionario  $funcionario
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Maquina $maquina)
+    public function update(Request $request, Funcionario $funcionario)
     {
         //
     }
@@ -75,10 +75,10 @@ class MaquinaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Maquina  $maquina
+     * @param  \App\Models\Funcionario  $funcionario
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Maquina $maquina)
+    public function destroy(Funcionario $funcionario)
     {
         //
     }

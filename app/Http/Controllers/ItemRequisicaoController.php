@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Insumo;
+use App\Models\ItemRequisicao;
 use Illuminate\Http\Request;
 
-class InsumoController extends Controller
+class ItemRequisicaoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class InsumoController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Insumo  $insumo
+     * @param  \App\Models\ItemRequisicao  $itemRequisicao
      * @return \Illuminate\Http\Response
      */
-    public function show(Insumo $insumo)
+    public function show(ItemRequisicao $itemRequisicao)
     {
         //
     }
@@ -52,10 +52,10 @@ class InsumoController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Insumo  $insumo
+     * @param  \App\Models\ItemRequisicao  $itemRequisicao
      * @return \Illuminate\Http\Response
      */
-    public function edit(Insumo $insumo)
+    public function edit(ItemRequisicao $itemRequisicao)
     {
         //
     }
@@ -64,10 +64,10 @@ class InsumoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Insumo  $insumo
+     * @param  \App\Models\ItemRequisicao  $itemRequisicao
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Insumo $insumo)
+    public function update(Request $request, ItemRequisicao $itemRequisicao)
     {
         //
     }
@@ -75,10 +75,10 @@ class InsumoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Insumo  $insumo
+     * @param  \App\Models\ItemRequisicao  $itemRequisicao
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Insumo $insumo)
+    public function destroy(ItemRequisicao $itemRequisicao)
     {
         //
     }

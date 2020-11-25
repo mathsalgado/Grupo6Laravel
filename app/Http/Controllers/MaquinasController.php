@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Maquinas;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class MaquinasController extends Controller
 {
@@ -14,7 +15,7 @@ class MaquinasController extends Controller
      */
     public function index()
     {
-        //
+        return View('maquinas.index')->with('maquinas', Maquinas::paginate(1));
     }
 
     /**
@@ -24,7 +25,7 @@ class MaquinasController extends Controller
      */
     public function create()
     {
-        //
+        return View('maquinas.create');
     }
 
     /**
@@ -35,7 +36,18 @@ class MaquinasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,
+            [
+                'tipo' => 'required|max: 10',
+                'produto' => 'required|max: 20'
+            ],
+            [
+                'tipo.*' => 'Tipo é obrigatório',
+                'produto.*' => 'Produto obrigatório'
+            ]
+        );
+        Maquinas::create($request->all());
+        return redirect('\maquinas');
     }
 
     /**
@@ -44,20 +56,20 @@ class MaquinasController extends Controller
      * @param  \App\Models\Maquinas  $maquinas
      * @return \Illuminate\Http\Response
      */
-    public function show(Maquinas $maquinas)
+    public function show(Maquinas $maquina)
     {
-        //
+        return View('maquinas.show')->with('maquinas', $maquinas);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Maquinas  $maquinas
+     * @param  \App\Models\Maquina  $maquina
      * @return \Illuminate\Http\Response
      */
-    public function edit(Maquinas $maquinas)
+    public function edit(Maquinas $maquina)
     {
-        //
+        return View('maquinas.edit')->with('maquinas', $maquinas);
     }
 
     /**
@@ -69,7 +81,18 @@ class MaquinasController extends Controller
      */
     public function update(Request $request, Maquinas $maquinas)
     {
-        //
+        $this->validate($request,
+            [
+                'tipo' => 'required|max: 10',
+                'produto' => 'required|max: 20'
+            ],
+            [
+                'tipo.*' => 'Tipo é obrigatório',
+                'produto.*' => 'Produto obrigatório'
+            ]
+        );
+        $maquinas->update($request->all());
+        return redirect('/maquinas');
     }
 
     /**
@@ -80,6 +103,7 @@ class MaquinasController extends Controller
      */
     public function destroy(Maquinas $maquinas)
     {
-        //
+        Maquinas::destroy($id);
+        return redirect('/maquinas');
     }
 }

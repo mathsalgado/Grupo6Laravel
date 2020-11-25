@@ -14,7 +14,9 @@ class CreateMaquinasTable extends Migration
     public function up()
     {
         Schema::create('maquinas', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->string('tipo');
+            $table->string('produto');
             $table->timestamps();
         });
     }

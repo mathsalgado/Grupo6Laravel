@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Requisicao extends Model
 {
     protected $fillable = ['id','data','funcionario_id'];
+
+    public function getFuncionario() {
+        return $this->hasMany('App\Material');
+    }
 }

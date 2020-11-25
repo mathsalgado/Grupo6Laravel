@@ -9,5 +9,8 @@ class Funcionario extends Model
 {
     protected $fillable = ['id','nome','endereco'];
 
+    public function getRequisicoes(){
+        return $this->hasMany('App\Requisicao');
+    }
 
 }

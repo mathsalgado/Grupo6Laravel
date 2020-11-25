@@ -14,7 +14,7 @@ class MaterialController extends Controller
      */
     public function index()
     {
-        //
+        return View('material.index')->with('materials',Material::paginate(2));
     }
 
     /**
@@ -24,7 +24,7 @@ class MaterialController extends Controller
      */
     public function create()
     {
-        //
+        return View('material.create');
     }
 
     /**
@@ -35,7 +35,7 @@ class MaterialController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**

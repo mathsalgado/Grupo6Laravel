@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Maquinas extends Model
 {
-    protected $fillable = ['id', 'descricao'];
+    protected $fillable = ['id','tipo','produto'] ;
 
-    public function getItens(){
-        return $this->hasMany('App\ItemRequisicao');
+    public function getMaquinas(){
+        return $this->
     }
 }

@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::resource('Funcionario', 'FuncionarioController');
+
+Route::resource('Maquinas', 'MaquinasController');
+
+Route::resource('Requisicao', 'RequisicaoController');
+
+Route::resource('Material', 'MaterialController');
+
+Route::resource('ItemRequisicao', 'ItemRequisicaoUserController');

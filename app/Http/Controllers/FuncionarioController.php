@@ -35,10 +35,10 @@ class FuncionarioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       //
     }
 
-    /**
+    /*
      * Display the specified resource.
      *
      * @param  \App\Models\Funcionario  $funcionario

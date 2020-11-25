@@ -14,7 +14,9 @@ class CreateItemRequisicaosTable extends Migration
     public function up()
     {
         Schema::create('item_requisicaos', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->foreignId('material_id');
+            $table->integer('quantidade');
             $table->timestamps();
         });
     }

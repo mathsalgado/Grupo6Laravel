@@ -14,7 +14,9 @@ class CreateRequisicaosTable extends Migration
     public function up()
     {
         Schema::create('requisicaos', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->dateTime('data');
+            $table->integer('funcionario_id');
             $table->timestamps();
         });
     }

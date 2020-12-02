@@ -19,5 +19,5 @@
 @endforeach
 </table>
 
-{{$maquinas->links()}}
+{{$Maquinas->links()}}
 @endsection

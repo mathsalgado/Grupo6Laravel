@@ -10,6 +10,6 @@ class Maquinas extends Model
     protected $fillable = ['id','tipo','produto'] ;
 
     public function getMaquinas(){
-        return $this->
+        return $this->hasMany('App\Maquinas');
     }
 }

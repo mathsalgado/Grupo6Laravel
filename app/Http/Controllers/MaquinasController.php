@@ -15,7 +15,8 @@ class MaquinasController extends Controller
      */
     public function index()
     {
-        return View('maquinas.index')->with('maquinas', Maquinas::paginate(1));
+        $maquinas = Maquinas::paginate(2);
+        return View('Maquinas.index')->with('Maquinas', $maquinas);
     }
 
     /**
@@ -25,7 +26,7 @@ class MaquinasController extends Controller
      */
     public function create()
     {
-        return View('maquinas.create');
+        return View('Maquinas.create');
     }
 
     /**
@@ -47,7 +48,7 @@ class MaquinasController extends Controller
             ]
         );
         Maquinas::create($request->all());
-        return redirect('\maquinas');
+        return redirect('/Maquinas');
     }
 
     /**
@@ -56,9 +57,9 @@ class MaquinasController extends Controller
      * @param  \App\Models\Maquinas  $maquinas
      * @return \Illuminate\Http\Response
      */
-    public function show(Maquinas $maquina)
+    public function show($id)
     {
-        return View('maquinas.show')->with('maquinas', $maquinas);
+        return View('Maquinas.show')->with('Maquinas', Maquinas::find($id));
     }
 
     /**
@@ -67,9 +68,9 @@ class MaquinasController extends Controller
      * @param  \App\Models\Maquina  $maquina
      * @return \Illuminate\Http\Response
      */
-    public function edit(Maquinas $maquina)
+    public function edit($id)
     {
-        return View('maquinas.edit')->with('maquinas', $maquinas);
+        return View('Maquinas.edit')->with('Maquinas', Maquinas::find($id));
     }
 
     /**
@@ -79,7 +80,7 @@ class MaquinasController extends Controller
      * @param  \App\Models\Maquinas  $maquinas
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Maquinas $maquinas)
+    public function update(Request $request, $id)
     {
         $this->validate($request,
             [
@@ -91,8 +92,9 @@ class MaquinasController extends Controller
                 'produto.*' => 'Produto obrigatório'
             ]
         );
+        $maquinas = Maquinas::find($id);
         $maquinas->update($request->all());
-        return redirect('/maquinas');
+        return redirect('Maquinas');
     }
 
     /**
@@ -101,9 +103,9 @@ class MaquinasController extends Controller
      * @param  \App\Models\Maquinas  $maquinas
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Maquinas $maquinas)
+    public function destroy($id)
     {
         Maquinas::destroy($id);
-        return redirect('/maquinas');
+        return redirect('/Maquinas');
     }
 }

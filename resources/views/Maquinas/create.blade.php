@@ -2,7 +2,7 @@
 @section('titulo','Criar Maquina')
 @section('corpo')
 	<div class="container">
-		<h3>Novo Funcionário</h3>
+		<h3>Nova Maquina</h3>
 		<div class="row">
 			<div class="col-sm-6">
 				<form action="/maquinas" method="post">

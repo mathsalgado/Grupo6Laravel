@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Maquinas;
+use App\Models\Maquina;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
@@ -15,8 +15,8 @@ class MaquinasController extends Controller
      */
     public function index()
     {
-        $maquinas = Maquinas::paginate(2);
-        return View('Maquinas.index')->with('Maquinas', $maquinas);
+        $maquinas = Maquina::paginate(2);
+        return View('Maquinas.index')->with('maquinas', $maquinas);
     }
 
     /**

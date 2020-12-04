@@ -13,7 +13,7 @@ class CreateMaquinasTable extends Migration
      */
     public function up()
     {
-        Schema::create('Maquinas', function (Blueprint $table) {
+        Schema::create('maquinas', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('tipo');
             $table->string('produto');

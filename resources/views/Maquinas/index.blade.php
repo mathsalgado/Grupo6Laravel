@@ -1,6 +1,6 @@
 @extends('master')
 @section('titulo','Lista de Maquinas')
-@section('corpo ')
+@section('corpo')
 <a href="/maquinas/create" class="btn btn-primary btn-sm"> Novo </a>
 <table class="table table-striped">
 <tr>
@@ -19,5 +19,5 @@
 @endforeach
 </table>
 
-{{$Maquinas->links()}}
+{{$maquinas->links()}}
 @endsection

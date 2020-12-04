@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\MaquinasController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,9 +16,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::resource('Funcionario', 'FuncionarioController');
 
-Route::resource('Maquinas', 'MaquinasController');
+Route::resource('Maquina', MaquinasController::class);
 
 Route::resource('Requisicao', 'RequisicaoController');
 

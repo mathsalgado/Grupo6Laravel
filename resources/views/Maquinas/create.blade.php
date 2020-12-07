@@ -5,7 +5,7 @@
 		<h3>Nova Maquina</h3>
 		<div class="row">
 			<div class="col-sm-6">
-				<form action="/maquinas" method="post">
+				<form action="/Maquina" method="post">
 					@csrf  <!-- token de segurança -->
 					<div class="form-group">
 						<label for="nome">Tipo</label>
@@ -22,7 +22,7 @@
 						@endif
 					</div>
 		    		<input type="submit" value="Criar" class="btn btn-primary btn-sm"/>
-		    		<a href="/maquinas" class="btn btn-primary btn-sm">Voltar</a>
+		    		<a href="/Maquina" class="btn btn-primary btn-sm">Voltar</a>
 				</form>
 			</div>
 		</div>

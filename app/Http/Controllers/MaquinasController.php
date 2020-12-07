@@ -47,19 +47,19 @@ class MaquinasController extends Controller
                 'produto.*' => 'Produto obrigatório'
             ]
         );
-        Maquinas::create($request->all());
+        Maquina::create($request->all());
         return redirect('/Maquinas');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Maquinas  $maquinas
+     * @param  \App\Models\Maquina  $maquinas
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        return View('Maquinas.show')->with('Maquinas', Maquinas::find($id));
+        return View('Maquinas.show')->with('maquinas', Maquina::find($id));
     }
 
     /**
@@ -70,14 +70,14 @@ class MaquinasController extends Controller
      */
     public function edit($id)
     {
-        return View('Maquinas.edit')->with('Maquinas', Maquinas::find($id));
+        return View('Maquinas.edit')->with('maquinas', Maquina::find($id));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Maquinas  $maquinas
+     * @param  \App\Models\Maquina  $maquinas
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -92,9 +92,9 @@ class MaquinasController extends Controller
                 'produto.*' => 'Produto obrigatório'
             ]
         );
-        $maquinas = Maquinas::find($id);
+        $maquinas = Maquina::find($id);
         $maquinas->update($request->all());
-        return redirect('Maquinas');
+        return redirect('/Maquina');
     }
 
     /**
@@ -105,7 +105,7 @@ class MaquinasController extends Controller
      */
     public function destroy($id)
     {
-        Maquinas::destroy($id);
-        return redirect('/Maquinas');
+        Maquina::destroy($id);
+        return redirect('/Maquina');
     }
 }

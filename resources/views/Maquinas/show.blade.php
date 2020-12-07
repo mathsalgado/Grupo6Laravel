@@ -6,16 +6,21 @@
 		<div class="row">
 			<div class="col-sm-6">
 				<dl>
+                    <?php
+                    $id = $maquinas->id ?? 1;
+                    $tipo = $maquinas->tipo ?? 'teste';
+                    $produto = $maquinas->produto ?? 'teste';
+                   ?>
 					<dt>Tipo</dt>
-					<dd>{{$maquinas->nome}}</dd>
+					<dd>{{$tipo}}</dd>
 					<dt>Produto</dt>
-					<dd>{{$maquinas->endereco}}</dd>
+					<dd>{{$produto}}</dd>
 				</dl>
-				<form action="/maquinas/{{$maquinas->id}}" method="post" onsubmit="return confirm('Confirma exclusão?')">
+				<form action="/Maquina/{{$id}}" method="post" onsubmit="return confirm('Confirma exclusão?')">
 					@csrf
 					@method('DELETE')
 					<input type="submit" value="Excluir" class="btn btn-primary btn-sm">
-					<a href="/maquinas" class="btn btn-primary btn-sm">Voltar</a>
+					<a href="/Maquina" class="btn btn-primary btn-sm">Voltar</a>
 				</form>
 			</div>
 		</div>
